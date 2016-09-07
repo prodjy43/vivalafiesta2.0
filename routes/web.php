@@ -49,4 +49,6 @@ Route::group(['prefix' => 'account'], function() {
  */
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::get('user', 'AdminController@user');
+
+    Route::get('user/edit/{slug}', 'AdminController@editUser');
 });
