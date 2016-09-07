@@ -43,3 +43,10 @@ Route::group(['prefix' => 'account'], function() {
 
     Route::delete('delete/{id}','AccountController@delete')->middleware('auth');
 });
+
+/**
+ * Route groupe for admin
+ */
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
+    Route::get('user', 'AdminController@user');
+});

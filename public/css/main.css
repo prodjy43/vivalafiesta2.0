@@ -78,12 +78,24 @@
 		color:#f5f5f5; 
 	}
 	.btn-function{
+		display: inline-block;
 		padding:5px;
-		background:#282b34  url("../images/overlay.png");
+		width: 50px;
 		margin-left: 5px;
 		border-radius: 5px;
-		color:#f5f5f5;
+		color:#212121;
 		text-align: center;
+		font-size: 1.3em;
+	}
+	.edit:hover{
+		background-color: #e67e22;
+		transition:all 0.3s, transform 0.3s;
+		color:#f5f5f5;
+	}
+	.delete:hover{
+		background-color: #e74c3c;
+		transition:all 0.3s, transform 0.3s;
+		color:#f5f5f5;
 	}
 /* Box Model */
 
