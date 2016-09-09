@@ -56,3 +56,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
 
     Route::get('user/delete/{slug}', 'AdminController@delete');
 });
+
+/**
+ * Route groupe for faq
+ */
+Route::group(['prefix' => 'faq'], function() {
+    Route::get('themes', 'faqController@show');
+});
