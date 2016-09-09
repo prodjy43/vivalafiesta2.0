@@ -21,7 +21,7 @@
 							<td>{{ $user->prenom }}</td>
 							<td>{{ $user->email }}</td>
 							<td>{{ $user->grade }}</td>
-							<td><a href="/admin/user/edit/{{ $user->nom.'-'.$user->prenom }}" class="btn-function edit"><i class="fa fa-edit"></i></a><a href="#" class="btn-function delete"><i class="fa fa-trash"></i></a></td>
+							<td><a href="/admin/user/edit/{{ $user->nom.'-'.$user->prenom }}" class="btn-function edit"><i class="fa fa-edit"></i></a><a href="/admin/user/delete/{{ $user->nom.'-'.$user->prenom }}" class="btn-function delete"><i class="fa fa-trash"></i></a></td>
 						</tr>
 					@endforeach
 				</tbody>

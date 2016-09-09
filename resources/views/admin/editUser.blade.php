@@ -5,7 +5,7 @@
 
 		<div class="title">{{ $title }}</div>
 		<div id="highlights" class="container">
-			{!! Form::model($user, ['url' => 'account/edit/'.$user->id, 'method' => 'put']) !!}
+			{!! Form::model($user, ['url' => 'admin/user/edit/'.$user->nom.'-'.$user->prenom, 'method' => 'put']) !!}
 				{!! Form::token() !!}
 				<div class="row 150%">
 					<div class="6u 12u(mobile)">

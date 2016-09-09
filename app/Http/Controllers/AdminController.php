@@ -21,4 +21,22 @@ class AdminController extends Controller
     	$grades = Grade::all();
     	return view('admin.editUser', ['user' => $user, 'grades' => $grades, 'title' => 'edition '.$slug[0].' '.$slug[1]]);
     }
+
+    public function modUser(Request $request, $slug){
+    	$slug = explode('-', $slug);
+    	$user = $this->update($request->all(), $slug);
+    	return redirect('/admin/user/edit/'.$slug[0].'-'.$slug[1]);
+    }
+
+    public function delete($slug){
+        $slug = explode('-', $slug);
+        User::where('nom', $slug[0])->where('prenom', $slug[1])->delete();
+        return redirect('/admin/user');
+    }
+
+    protected function update(array $data, $slug){
+    	return User::where('nom', $slug[0])->where('prenom', $slug[1])->update([
+    		'grade_id' => $data['grade'],
+    	]);
+    }
 }
