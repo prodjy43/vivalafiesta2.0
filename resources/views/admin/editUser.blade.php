@@ -2,6 +2,7 @@
 
 @section('content')
 	<div class="wrapper style2">
+
 		<div class="title">{{ $title }}</div>
 		<div id="highlights" class="container">
 			{!! Form::model($user, ['url' => 'account/edit/'.$user->id, 'method' => 'put']) !!}
@@ -23,7 +24,13 @@
 						{!! Form::textarea('statut', null, $attributes = ['placeholder' => 'Statut de profil', 'disabled' => 'disabled']) !!}
 					</div>
 					<div class="12u 12u(mobile)">
-						{!! Form::select('grade', $grades) !!}
+						<select name="grade">
+							@foreach ($grades as $grade)
+								<option value="{{ $grade->id }}" @if ($grade->id == $user->grade_id)
+									selected
+								@endif>{{ $grade->grade }}</option>
+							@endforeach	
+						</select>
 					</div>
 					<div class="12u 12u(mobile)">
 						{!! Form::submit('Enregistrer', ['class' => 'style3']) !!}
