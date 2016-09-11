@@ -30,4 +30,8 @@ class User extends Authenticatable
     public function grade(){
         return $this->belongsTo('App\Grade');
     }
+
+    public function theme(){
+        return $this->hasMany('App\Theme');
+    }
 }

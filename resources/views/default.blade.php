@@ -37,7 +37,7 @@
 											<li><a href="#">Administration</a>
 												<ul>
 													<li><a href="/admin/user">Utilisateurs</a></li>
-													<li><a href="/administration/faq">F.A.Q</a></li>
+													<li><a href="/administration/faq/themes">F.A.Q</a></li>
 													<li><a href="/administration/evenements">Evénements</a></li>
 													<li><a href="/administration/transactions">Transactions</a></li>
 													<li><a href="/administration/benefice">Bénéfice / Recette</a></li>

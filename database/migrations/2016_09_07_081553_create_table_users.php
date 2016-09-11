@@ -18,7 +18,7 @@ class CreateTableUsers extends Migration
             $table->string('nom');
             $table->string('prenom');
             $table->string('email')->unique();
-            $table->string('pasword');
+            $table->string('password');
             $table->text('statut');
             $table->integer('grade_id')->default(1);
             $table->rememberToken();

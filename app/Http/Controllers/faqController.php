@@ -11,8 +11,7 @@ use App\User;
 class faqController extends Controller
 {
     public function show(){
-    	$themes = Theme::all();
-   		dd($themes);
-    	
+    	$themes = Theme::join('users', 'user_id', '=', 'users.id')->get();
+   		return view('faq.themes', ['themes' => $themes, 'title' => 'Questions F.A.Q']);
     }
 }
