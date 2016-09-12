@@ -7,7 +7,7 @@
 		@if (!Auth::check())
 			<p>Vous devez être connecter pour posez une question ! <a href="/account/login">Connectez-vous ici</a></p>
 		@else
-			<a href="/faq/themes/add" class="button style3">Posez une question</a>
+			<a href="/faq/add/themes" class="button style3">Posez une question</a>
 		@endif
 		<hr>
 			<table>
@@ -26,7 +26,7 @@
 							<td>{{ $theme->question }}</td>
 							<td>{{ $theme->theme }}</td>
 							<td>{{ $theme->nom }} {{ $theme->prenom }}</td>
-							<td>0</td>
+							<td>{{ $nbcomment[$theme->slug] }}</td>
 							<td><a href="/faq/themes/{{ $theme->slug }}">Voir la question</a></td>
 						</tr>
 					@endforeach

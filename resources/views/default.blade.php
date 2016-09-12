@@ -30,14 +30,14 @@
 											<li><a href="galerie/videos">Vidéos</a></li>
 										</ul>
 									</li>
-									<li><a href="/faq">F.A.Q</a></li>
+									<li><a href="/faq/themes">F.A.Q</a></li>
 									@if (Auth::check())
 										<li><a href="/account/{{ Auth::user()->nom }}/{{ Auth::user()->prenom }}">{{ Auth::user()->prenom }} {{ Auth::user()->nom }}</a></li>
 										@if (Auth::user()->grade_id === 2)
 											<li><a href="#">Administration</a>
 												<ul>
 													<li><a href="/admin/user">Utilisateurs</a></li>
-													<li><a href="/administration/faq/themes">F.A.Q</a></li>
+													<li><a href="/admin/faq">F.A.Q</a></li>
 													<li><a href="/administration/evenements">Evénements</a></li>
 													<li><a href="/administration/transactions">Transactions</a></li>
 													<li><a href="/administration/benefice">Bénéfice / Recette</a></li>

@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Theme extends Authenticatable
+class Comment extends Authenticatable
 {
     use Notifiable;
 
@@ -15,11 +15,6 @@ class Theme extends Authenticatable
      * @var array
      */
     protected $fillable = [
-       'question', 'theme', 'user_id', 'slug',
+       'title', 'content', 'theme_slug', 'user_id',
     ];
-
-
-    public function user(){
-    	return $this->belongsTo('App\User');
-    }
 }

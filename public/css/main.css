@@ -97,6 +97,18 @@
 		transition:all 0.3s, transform 0.3s;
 		color:#f5f5f5;
 	}
+	.comment{
+		padding: 10px;
+		margin-bottom: 20px;
+		border-radius: 5px;
+		box-shadow: 0 3px 6px rgba(0,0,0,.16), 0 3px 6px rgba(0,0,0,.23);
+	}
+	.comment:nth-child(odd){
+		background-color: rgba(0,0,0,.06);
+	}
+	.comment:nth-child(even){
+		background-color: rgba(0,0,0,.13);
+	}
 /* Box Model */
 
 	*, *:before, *:after {

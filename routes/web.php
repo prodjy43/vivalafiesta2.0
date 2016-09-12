@@ -62,4 +62,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function() {
  */
 Route::group(['prefix' => 'faq'], function() {
     Route::get('themes', 'faqController@show');
+
+    Route::get('themes/{slug}', 'faqController@disc');
+
+    Route::post('themes/comment', 'faqController@storeComment')->middleware('auth');
+
+    Route::post('themes/theme', 'faqController@storeTheme')->middleware('auth');
+
+    Route::get('add/themes', 'faqController@addtheme')->middleware('auth');
 });
