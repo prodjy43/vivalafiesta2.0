@@ -71,3 +71,7 @@ Route::group(['prefix' => 'faq'], function() {
 
     Route::get('add/themes', 'faqController@addtheme')->middleware('auth');
 });
+
+Route::get('conditions-generales', function(){
+    return view('general', ['title' => 'Conditions générales d\'utilisation']);
+});

@@ -77,7 +77,7 @@
                     </div>
                     <ul class="actions actions-centered">
                         <li><a href="#" class="button style1 big">Commencer</a></li>
-                        <li><a href="#" class="button style2 big">Plus d'informations</a></li>
+                        <li><a href="/conditions-generales" class="button style2 big">Conditions générales</a></li>
                     </ul>
                 </section>
 
