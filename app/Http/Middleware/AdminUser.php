@@ -16,7 +16,11 @@ class AdminUser
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::user()->grade_id !== 2) {
+        if (Auth::check()) {
+            if (Auth::user()->grade_id !== 2) {
+            return redirect('/');
+            }
+        }else{
             return redirect('/');
         }
         return $next($request);
