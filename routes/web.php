@@ -15,7 +15,7 @@
  * Route to home page
  */
 Route::get('/', function () {
-    return view('welcome')->with('title', 'Home');
+    return view('welcome', ['title' => 'Accueil']);
 });
 
 
@@ -28,13 +28,13 @@ Route::group(['prefix' => 'account'], function() {
     Route::post('register','AccountController@store')->middleware('guest');
 
     Route::get('register', function(){
-    	return view('user.register')->with('title', 'inscription');
+    	return view('user.register', ['title' => 'inscription']);
     })->middleware('guest');
 
     Route::post('login','AccountController@login')->middleware('guest');
 
     Route::get('login', function(){
-    	return view('user.login')->with('title', 'connexion');
+    	return view('user.login', ['title' => 'connexion']);
     })->middleware('guest');
 
     Route::get('logout', 'AccountController@deco')->middleware('auth');
